@@ -45,7 +45,7 @@ Each project is designed to be **independent**, meaning you can set up and run e
 - **Data Scraper:** `scrape_imdb_data.ipynb`
 - **Environment:** `environment.yml`
 - **Report:** `project_report.pdf`
-- **CSV files: `https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset`
+- **CSV files:** `https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset`
 
 ---
 
