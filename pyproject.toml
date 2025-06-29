@@ -1,0 +1,63 @@
+[project]
+name = "ml-mini-projects"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black[jupyter]",
+    "isort",
+    "flake8",
+    "flake8-pyproject",
+    "flake8-bandit",
+    "flake8-bugbear",
+    "flake8-builtins",
+    "flake8-comprehensions",
+    "flake8-eradicate",
+    "flake8-implicit-str-concat",
+    "flake8-print",
+    "pep8-naming",
+    "pre-commit",
+    "commitizen",
+    "jupyter",
+]
+
+[tool.black]
+line-length = 120
+target-version = ['py313']
+exclude = '''
+/(
+  \.toml
+  |\.sh
+  |\.git
+  |\.ini
+  |\.json
+  |\.md
+  |\.venv
+)/
+'''  # Files Black will ignore
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["network_intrusion_detection",
+             "movie_recommender",
+             "clip_embedding_classifier"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "v$version"
+version_files = [
+    "pyproject.toml:version"
+]
+
+[tool.setuptools.packages.find]
+include = [
+    "network_intrusion_detection",
+    "movie_recommender",
+    "clip_embedding_classifier"
+]
+
+# tooling config for black, isort, flake8, commitizen ...
